@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Wedding Invitation - Zinhle & Njabulo</title>
+<style>
+  body {
+    font-family: 'Georgia', serif;
+    background: #fdf8f4;
+    color: #5a4631;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+  }
+  header {
+    text-align: center;
+    padding: 40px 0 30px;
+  }
+  header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0;
+  }
+  header p {
+    font-size: 1.2rem;
+    color: #8b7e66;
+  }
+  section {
+    margin-bottom: 40px;
+  }
+  h2 {
+    border-bottom: 2px solid #d9cbbd;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  .gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  input, select, textarea, button {
+    padding: 12px;
+    border: 1px solid #c4bba8;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  button {
+    background-color: #8b7e66;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #72644b;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Zinhle & Njabulo</h1>
+  <p>We're getting married! - 21 September 2025</p>
+</header>
+
+<section>
+  <h2>Event Details</h2>
+  <p><strong>Date:</strong> 21 September 2025</p>
+  <p><strong>Time:</strong> 10:00 AM</p>
+  <p><strong>Venue:</strong> Port Shepstone, Mehlomnyama</p>
+  <p><strong>RSVP by:</strong> 19 September</p>
+  <p><strong>Contact:</strong> 063 320 0889 / 062 807 2051</p>
+  <p><strong>Email:</strong> khanyilesphelele47@gmail.com</p>
+</section>
+
+<section>
+  <h2>Our Gallery</h2>
+  <div class="gallery">
+    <img src="photo1.jpg" alt="Couple Photo 1" />
+    <img src="photo2.jpg" alt="Couple Photo 2" />
+    <img src="photo3.jpg" alt="Couple Photo 3" />
+  </div>
+</section>
+
+<section>
+  <h2>RSVP</h2>
+  <form id="rsvpForm">
+    <input type="text" name="name" placeholder="Your Full Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <select name="attending" required>
+      <option value="" disabled selected>Will you attend?</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+    <input type="number" name="guests" placeholder="Number of Guests" min="1" required />
+    <textarea name="message" placeholder="Message (optional)" rows="3"></textarea>
+    <button type="submit">Send RSVP</button>
+  </form>
+</section>
+
+<script>
+  document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for your RSVP, ' + this.name.value + '!');
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
